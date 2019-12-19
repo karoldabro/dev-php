@@ -5,6 +5,7 @@ My workspace to easily develop php packages
 - docker webdevops enviroment with php7.3  
 - VS Code settings for xdebug  
 ## Usage
+### Prepare enviroment
 1. Open terminal.
 2. Go to dedicated directory:  
 ```bash
@@ -14,11 +15,12 @@ cd your/dir/name
 ```bash
 git clone git@github.com:karoldabro/library-dev-php.git ./
 ```
-4. Go to app directory:  
+4. Clone your repo. All package files should go to into *app* directory.
 ```bash
-cd app
+git clone yourrepourl ./app
 ```
-5. Clone your repo. All package files should go to *app* directory.
+### Setup docker
+1. Make docker-compose network by:
 ```bash
-git clone yourrepourl ./
+docker-compose up -d
 ```
