@@ -1,0 +1,15 @@
+version: '3.1'
+
+services:
+
+  server:
+    build: ./services/server
+    volumes: 
+      - ./app/:/app/
+      - ./services/server/php.ini:/opt/docker/etc/php/php.ini
+    expose:
+      - "9000"
+    environment:
+      - PHP_DISPLAY_ERRORS=1
+      - PHP_DEBUGGER=xdebug
+      - WEB_DOCUMENT_ROOT=/app
