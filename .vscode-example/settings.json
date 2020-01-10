@@ -1,5 +1,5 @@
 {
-    "phpunit.command": "docker-compose run --rm server",
+    "phpunit.command": "docker-compose -f .docker/docker-compose.yml run --rm server",
     "phpunit.phpunit": "/app/vendor/bin/phpunit",
     "phpunit.paths": {
         "${workspaceFolder}": "/app"
