@@ -4,7 +4,6 @@ services:
 
   server:
     build: ./services/server
-    container_name: server
     volumes: 
       - ./app/:/app/
       - ./services/server/php.ini:/opt/docker/etc/php/php.ini
