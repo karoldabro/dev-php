@@ -5,7 +5,7 @@ services:
   server:
     build: ./services/server
     volumes: 
-      - ./app/:/app/
+      - ../:/app/
       - ./services/server/php.ini:/opt/docker/etc/php/php.ini
     expose:
       - "9000"
