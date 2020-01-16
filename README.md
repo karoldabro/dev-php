@@ -6,6 +6,7 @@ My workspace to easily develop php packages. Added as gitsubmodule.
 - Example VS Code settings for xdebug.
 - Example PHP project configuration.
 - Copy ssh form given directory to make possible to use git inside the container.
+- Make file to manage creation
 ## Usage
 ### Prepare enviroment
 1. Open terminal.
@@ -17,13 +18,25 @@ cd your/project/dir/name
 ```bash
 git submodule add git@github.com:karoldabro/library-dev-php.git .docker
 ```
-4. Copy .env-example file into your project catalog and change it's name to .env.
+4. Copy .env file into your project catalog.
 ```bash
-cp .docker/.env-example .env
+cp .docker/.env .env
 ```
-5. Fill .env file with your data.
-### Setup docker
-1. Make docker-compose network by:
+5. Copy Makefile into your project catalog.
 ```bash
-docker-compose up -d
+cp .docker/Makefile .
+```
+6. Fill .env file with your data.
+### Use it
+#### Up docker-compose network by:
+```bash
+make
+```
+#### Down docker-compose network by:
+```bash
+make down
+```
+#### Exec container shell by:
+```bash
+make server
 ```
