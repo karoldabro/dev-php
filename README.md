@@ -18,25 +18,37 @@ cd your/project/dir/name
 ```bash
 git submodule add git@github.com:karoldabro/library-dev-php.git .docker
 ```
-4. Copy .env file into your project catalog.
+4. (Optional) Copy .env file into your project catalog.
 ```bash
 cp .docker/.env .env
 ```
-5. Copy Makefile into your project catalog.
+5. (Optional) Copy Makefile into your project catalog.
 ```bash
 cp .docker/Makefile .
 ```
-6. Fill .env file with your data.
+6. (Optional) Fill .env file with your data.
 ### Use it
 #### Up docker-compose network by:
 ```bash
+# By Makefile
 make
+
+# By docker-compose
+docker-compose -f .docker/docker-compose.yml up -d
 ```
 #### Down docker-compose network by:
 ```bash
+# By Makefile
 make down
+
+# By docker-compose
+docker-compose -f .docker/docker-compose.yml down
 ```
 #### Exec container shell by:
 ```bash
-make server
+# By Makefile
+make shell
+
+# By docker-compose
+docker-compose -f .docker/docker-compose.yml exec server sh -c "cd /app && /bin/zsh"
 ```
