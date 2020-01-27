@@ -1,6 +1,6 @@
 vendor
 .phpunit.result.cache
-tmp
 .vscode
 storage/*
 !storage/.gitkeep
+.env

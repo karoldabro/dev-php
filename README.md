@@ -52,3 +52,34 @@ make shell
 # By docker-compose
 docker-compose -f .docker/docker-compose.yml exec server sh -c "cd /app && /bin/zsh"
 ```
+## Examples
+This repo contains many example files, with already setup configuration. You can easily use them in your project.
+### PHP
+#### composer.json
+Remember to edit this file, change namespace and author. You can create your own by console command "composer init" but this contains useful libraries and configured namespaces.
+```bash
+cp .docker/.examples/.gitignore .
+```
+After this type:
+```bash
+composer update
+```
+#### phpunit.xml
+This configuration contains divide your tests into: Unit and Integration, and configuration for test coverage.
+```bash
+cp .docker/.examples/phpunit.xml .
+```
+Remember to create tests directory:
+```bash
+mkdir tests && mkdir tests/Unit && mkdir tests/Integration
+```
+#### .gitignore
+```bash
+cp .docker/.examples/composer.json .
+```
+
+### VS Code
+#### Default and configured vs code settings.json and xdebug lanuch.json
+```bash
+cp .docker/.vscode-example .vscode -r
+```
