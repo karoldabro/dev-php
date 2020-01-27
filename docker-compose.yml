@@ -6,7 +6,6 @@ services:
     build: ./services/server
     volumes: 
       - ../:/app/
-      - ./services/server/php.ini:/opt/docker/etc/php/php.ini
       - ${SSH_PATH}:/root/.ssh/
     expose:
       - "9000"
