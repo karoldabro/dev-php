@@ -17,10 +17,10 @@ cd your/project/dir/name
 3. Clone this repo: 
 ```bash
 # If git is initiated in your project
-git submodule add git@github.com:karoldabro/library-dev-php.git .docker
+git submodule add https://github.com/karoldabro/dev-php.git .docker
 
 # If your project do not have version controll
-git clone git@github.com:karoldabro/library-dev-php.git .docker
+git clone https://github.com/karoldabro/dev-php.git .docker
 ```
 4. (Optional) Copy .env file into your project catalog.
 ```bash
