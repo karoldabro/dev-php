@@ -89,5 +89,5 @@ cp .docker/.examples/composer.json .
 ### VS Code
 #### Default and configured vs code settings.json and xdebug lanuch.json
 ```bash
-cp .docker/.vscode-example .vscode -r
+cp .docker/.vscode .vscode -r
 ```
